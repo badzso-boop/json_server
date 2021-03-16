@@ -8,13 +8,24 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>Document</title>
 </head>
+<style>
+    .button
+    {
+        margin: 15px;
+        padding: 10px;
+        background-color: lightblue;
+        border: 1px solid;
+        border-radius: 25px;
+    }
+</style>
 <body>
     <div id="app">
-        <button v-on:click = "proba">Lekeres</button>
-        <button v-on:click = "proba2">Feltoltes</button>
-        <ul>
-            <li v-for="post in posts" v-text = "post.title"></li>
-        </ul>
+        <h1>Minden a consoleban van logolva</h1>
+        <button class = "button" v-on:click = "lekeres_fetch">Lekeres Fetch</button>
+        <button class = "button" v-on:click = "lekeres_axios">Lekeres Axios</button>
+        <br>
+        <button class = "button" v-on:click = "push_fetch">Feltoltes Fetch</button>
+        <button class = "button" v-on:click = "push_axios">Feltoltes Axios</button>
       </div>
     
 
